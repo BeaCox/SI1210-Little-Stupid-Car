@@ -23,7 +23,7 @@ void Go() {
   M2->run(FORWARD);
   M3->run(BACKWARD);
   M4->run(FORWARD);
-  for (; i < 198; i++) {
+  for (; i < 255; i++) {
     M1->setSpeed(i);
     M2->setSpeed(i);
     M3->setSpeed(i);
@@ -31,47 +31,41 @@ void Go() {
   }
 }
 
-void Left() {
-  M2->setSpeed(255);
-  M3->setSpeed(255);   
+void Left() {   
   M4->run(FORWARD);
   M1->run(BACKWARD);
-  M4->setSpeed(98);
-  M1->setSpeed(98);   
+  M4->setSpeed(225);
+  M1->setSpeed(225);   
   last = 1;
 }
 
 void Right() {
-  M1->setSpeed(255);
-  M4->setSpeed(255);
   M3->run(BACKWARD);
   M2->run(FORWARD);
-  M3->setSpeed(98);
-  M2->setSpeed(98);   
+  M3->setSpeed(225);
+  M2->setSpeed(225);   
   last = 2;
 }
 
 void LLeft() {
-  M2->setSpeed(255);
-  M3->setSpeed(255);
+  delay(80);
   M1->run(BRAKE);
   M4->run(BRAKE);
   last = 3;
 }
 
 void RRight() {
-  M1->setSpeed(255);
-  M4->setSpeed(255);
+  delay(80);
   M2->run(BRAKE);
   M3->run(BRAKE);
   last = 4;
 }
 
 void Back() {
-  M1->setSpeed(198);
-  M2->setSpeed(198);
-  M3->setSpeed(198);
-  M4->setSpeed(198);
+  M1->setSpeed(255);
+  M2->setSpeed(255);
+  M3->setSpeed(255);
+  M4->setSpeed(255);
 }
 
 void Mid() {
