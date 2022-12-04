@@ -1,4 +1,4 @@
-# Fucking-SI1210-Little-Bitch-Car
+# SI1210-Little-Stupid-Car
 
 ## Scoring Rules
 
